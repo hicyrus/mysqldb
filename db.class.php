@@ -6,7 +6,7 @@ class DB {
 
 	public function __construct()
 	{
-		$this->db = DB::getDB();
+		$this->db = DBCONN::getDB();
 	}
 
 
