@@ -1,2 +1,3 @@
 # mysqldb
-php mysql class 
+php mysql class
+try to write a mysql db class ! 
