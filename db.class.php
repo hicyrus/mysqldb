@@ -10,9 +10,10 @@ class DB {
 
 	}
 
-
 	public function query($sql){
 		$result = mysql_query($sql,$this->db);
+		if(empty($result))
+			echo mysql_errno();
 		return $result;
 	}
 
