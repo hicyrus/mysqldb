@@ -7,6 +7,14 @@ $db = new DB($conf);
 $sql = "select * from gifs";
 $res = $db->query($sql);
 
+$result = [];
+while ($row = mysql_fetch_array($res,MYSQL_ASSOC)) {
+	$result[] = $row;
+}
+
+
 var_dump($res);
+
+var_dump($result);
 
 ?>
