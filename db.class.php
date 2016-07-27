@@ -12,10 +12,9 @@ class DB {
 
 
 	public function query($sql){
-		$result = mysql_query();
+		$result = mysql_query($sql,$this->db);
 		return $result;
 	}
-
 
 
 }
