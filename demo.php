@@ -1,9 +1,9 @@
 <?php
 
+include_once "dbconn.class.php";
 include_once "db.class.php";
 
-$db = DB::getDb(['host'=>'localhost','name'=>'root','password'=>'zhuzhu']);
-
+$db = new DB();
 var_dump($db);
 
 ?>
