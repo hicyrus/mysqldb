@@ -2,16 +2,14 @@
 
 class DB {
 
-	public static $db = "";
+	private  $db = "";
 
-	public static function getDb($conf = null){
-		if(empty($conf)) return null;
-		if(empty(DB::$db)){
-			DB::$db = mysql_connect($conf['host'],$conf['name'],$conf['password']);
-			return DB::$db;
-		}
-		return DB::$db ;
+	public function __construct()
+	{
+		$this->db = DB::getDB();
 	}
+
+
 
 
 }
