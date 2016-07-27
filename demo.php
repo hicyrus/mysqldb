@@ -2,8 +2,8 @@
 
 include_once "dbconn.class.php";
 include_once "db.class.php";
-
-$db = new DB();
+$conf = ['host'=>'localhost','name'=>'root','password'=>'zhuzhu'];
+$db = new DB($conf);
 var_dump($db);
 
 ?>

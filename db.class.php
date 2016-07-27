@@ -4,9 +4,9 @@ class DB {
 
 	private  $db = "";
 
-	public function __construct()
+	public function __construct($conf)
 	{
-		$this->db = DBCONN::getDB();
+		$this->db = DBCONN::getDB($conf);
 	}
 
 
