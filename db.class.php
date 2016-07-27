@@ -11,7 +11,7 @@ class DB {
 	}
 
 
-	public public function query($sql){
+	public function query($sql){
 		$result = mysql_query();
 		return $result;
 	}
