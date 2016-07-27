@@ -6,7 +6,7 @@ class DB {
 
 	public function __construct($conf){
 		$this->db = DBCONN::getDB($conf);
-		if(empty($this->db)) mysql_select_db($conf['db'],$this->db);
+		if(empty($this->db)) mysql_select_db('3dgif',$this->db);
 
 	}
 
