@@ -7,15 +7,15 @@ class DB {
 	public static function getDb($conf = null){
 		if(empty($conf)) return null;
 
-		if(empty($this->db))
+		if(empty(DB::$db))
 		{
-			$this->db = mysql_connect($conf['host'],$conf['name'],$conf['password']);
+			DB::$db = mysql_connect($conf['host'],$conf['name'],$conf['password']);
 
-			return $this->db;
+			return DB::$db;
 		}
 
-		return $this->db ;
+		return DB::$db ;
 	}
 
-	
+
 }
