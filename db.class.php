@@ -11,11 +11,14 @@ class DB {
 	}
 
 	public function query($sql){
-		$result = mysql_query($sql,$this->db);
-		if(empty($result)){
-
+		$ret = mysql_query($sql,$this->db);
+		$result = [];
+		if(!empty($ret)){
+			
+			while ($row = mysql_fetch_array($ret,MYSQL_ASSOC)) {
+				$result[] = $row;
+			}
 		}
-			echo mysql_errno().mysql_error();
 		return $result;
 	}
 
